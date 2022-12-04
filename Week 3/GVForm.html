@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Good Vibes Form</title>
+</head>
+<!-- Styles for Header color, Text alignment, Body color and Buttons   -->
+<style>
+    .colour {
+        background-color:powderblue;
+        color:black;
+        padding: 10px;
+    }
+    .main {
+        text-align: center;
+    }
+    .bodyclr{
+        background-color:azure;
+        color:black;
+        padding-left: 50px;
+        border:1px solid blue;
+    }
+    .button{
+        border: none;
+        color: black;
+        padding: 10px 30px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+    }
+    .button1 {background-color: rgb(58, 179, 118);
+    }
+    .button2 {background-color: rgb(111, 124, 243);
+    }
+</style>
+<header>
+    <h1 class="colour main";>Good Vibes Form</h1>
+</header>
+<body class="bodyclr">
+    <p>
+        <strong>Tell us something positive that happened to you today</strong> 
+    </p>
+<!--   Auto complete of text turned off for complete form -->
+    <form action="/action_page.php" autocomplete ="off">
+<!--   Name field with text box -->
+        <div>
+            <label for="fname">Name*:</label>
+            <input type="text" id="fname" name="fname" value="Enter your name">
+            <br><br>
+        </div>
+<!--   Email field with text box -->
+        <div>
+            <label for="email">Email*:</label>
+            <input type="email" id="email" name="email" value="Enter the email address">
+            <br><br>
+        </div>
+<!--   Age field drop down list with age range -->
+        <div>
+            <label for ="age"> Age:</label>
+                <select id="age" name="age">
+                    <option value="Age">Select your age</option>
+                    <option value="Twenty Five">20-25</option>
+                    <option value="Thirty">26-30</option>
+                    <option value="Thirty Five">31-35</option>
+                    <option value="Fourty">36-40</option>
+                    <option value="Fourty Five">41-45</option>
+                    <option value="Fifty">46-50</option>
+                    <option value="Fifty Five">51-55</option>
+                    <option value="Sixty">56-60</option>
+                    <option value="Sixty Five">61-65</option>
+                    <option value="Seventy">66-70</option>
+                    <option value="Seventy Five">71-75</option>
+                    <option value="Eighty">76-80</option>
+                    <option value="Eighty five">81-85</option>
+                    <option value="Ninety">86-90</option>
+                    <option value="Ninety Five">91-95</option>
+                    <option value="Hundred">96-100</option>
+                </select>
+                <br><br>
+        </div>
+<!--   Rate Good vibe with drop down list -->
+        <div>
+            <label for="Quantity">On the scale of 1-10, how good was it?</label>  
+            <select id="quantity" name="quantity">  
+                    <option value="one">1</option>  
+                    <option value="Two">2</option>
+                    <option value="Three">3</option>  
+                    <option value="Four">4</option>  
+                    <option value="Five">5</option> 
+                    <option value="Six">6</option>
+                    <option value="seven">7</option>  
+                    <option value="Eight">8</option> 
+                    <option value="Nine">9</option> 
+                    <option value="Ten">10</option>  
+                </select>
+                <br><br>
+        </div>
+<!--   Place of Good vibe with drop down list -->
+        <div>
+        <label for="place">Where did it happen?*</label>
+                <select id="place" name="place">
+                    <option value="Home">At Home</option>
+                    <option value="office">At Office</option>
+                    <option value="Outside">At Outside</option>
+                    <option value="School">At School</option>
+                </select>
+        </div>
+        <div>
+<!--   Radio Button format fpr time ofthe day -->
+            <form action="/action_page.php" method="get"><br>
+                <label for="time of day">At what time of day did it happen?</label>
+                <br>
+                <input type="radio" id="Morning" name="Time of day"  value="Morning">
+                    <label for="Morning">Morning</label>
+                    <br>
+                <input type="radio" id="Afternoon" name="Time of day" value="Afternoon">
+                    <label for="Afternoon">Afternoon</label>
+                    <br>
+                <input type="radio" id="Evening" name="Time of day" value="Evening">
+                    <label for="Evening">Evening</label>
+                    <br><br>
+            </form>
+        </div>
+<!--   Checkbox format for selecting Emotions -->
+        <div>
+            <form action="/action_page.php" method="get">
+                <label for="emotions">What emotions did you experience?<br>
+                <label for="emotions"> (select all that apply)</label>
+                <br><br>
+                <input type="checkbox"  id="Excited" name="Excited" value="Excited">
+                    <label for="excited">Excited</label>
+                    <br>
+                <input type="checkbox" id="Humbled" name="Humbled" value="Humbled">
+                    <label for ="humbled">Humbled</label>
+                    <br>
+                <input type="checkbox"  id="Elated" name="Elated" value="Elated">
+                    <label for="Elated">Elated</label>
+                    <br>
+                <input type="checkbox" id="Loved" name="Loved" value="Loved">
+                    <label for ="Loved">Loved</label>
+                    <br>
+                <input type="checkbox" id="Enthusisstic" name="Enthusiastic" value="Enthusiastic">
+                    <label for ="Enthusiastic">Enthusiastic</label>
+                    <br><br>
+            </form>
+        </div>
+<!--   Free text box to enter Positive Experience -->
+        <div>
+            <label for="Positive Experience">Please describe your positive  experience:  </label><br>
+            <textarea name="positive experience" style="width:300px; height:60px" > Enter your experience here.. </textarea>
+            <br><br>
+        </div>
+<!--   Buttons Submit and Click Me -->
+        <div>
+            <button class="button button1">Submit</button>
+            <br><br>
+            <button class="button button2" onclick="alert('CORRECT!')" >Click Me!</button>
+            <br><br>
+        </div>
+    </form>
+</body>
+</html>
