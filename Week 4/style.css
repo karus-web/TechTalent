@@ -1,0 +1,10 @@
+body{
+    background-color:red;
+}
+<div class="my-nav-bar">
+        <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">contact</a></li>
+        </ul>
+     </div>

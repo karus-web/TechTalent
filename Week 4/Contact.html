@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="Cstyle.css" type="text/css">
+</head>
+<body>
+<!-- Cake Shop Common Header-->        
+    <div class="header">
+        <h1>Cake Shop</h1>
+    </div>
+<!-- Top Navigation bar with Contacts page active-->        
+    <div>
+        <ul class="topnav">
+            <li><a href="CakeHome.html">Home</a></li>
+            <li><a href="Order.html">Order Page</a></li>
+            <li><a class="active" href="Contact.html">Contacts</a></li>
+            <li class="right"><a href="About.html">About</a></li>
+        </ul>
+    </div>
+
+<!-- Common Styling for all About page-->         
+
+<!-- Contacts page Heading-->        
+    <div>
+        <h2>Contact</h2>
+    </div>
+    
+    <div class="container">
+        <form action="/action_page.php" autocomplete ="off">
+
+<!-- Name field with text box -->
+            <div>
+                <h4>
+                    Get in touch...
+                </h4>
+                <div class="fnotes">
+                    <p> Please message us using the form below and we'll get back to you as soon as we can. 
+                        You can find our shop details at the bottom of the page. Thanks!</p>
+                </div>    
+                <label for="yname">Your Name:</label>
+                <br>
+                <input type="text" id="yname" name="yname">
+                <br><br>
+            
+<!-- Email field with text box -->
+                <label for="email">Email *:</label>
+                <br>
+                <input type="email" id="email" name="email" required>
+                <br><br>
+            
+<!-- Telephone field with text box -->
+                <label for="Telephone">Telephone:</label>
+                <br>
+                <input type="text" id="Telephone" name="Telephone">
+                <br><br>
+
+<!-- Your message with text box -->            
+                <label for="Your Message*">Your Message *:  </label>
+                <br>
+                <textarea name="Type Your Message" placeholder="Type your message... " required></textarea>
+                <br><br>
+
+<!-- Send button with message -->            
+                <input type="button" value="Send">
+                <br><br>
+            </div>
+        </form>
+    </div>
+<!-- Cake Shop Common footer-->
+    <div class="footer">
+        <p> The Cake Shop is rated 5 - Very Good by the Food Standards Agency </p>
+        <p> Telephone : 0333 465 3434, Email: cake@cakeshop.com</p>
+    </div>
+</body>
+</html>
