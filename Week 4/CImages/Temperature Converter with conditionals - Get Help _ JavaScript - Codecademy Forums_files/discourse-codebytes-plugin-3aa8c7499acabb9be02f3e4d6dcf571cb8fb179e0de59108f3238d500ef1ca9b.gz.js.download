@@ -1,0 +1,46 @@
+define("discourse/plugins/discourse-codebytes-plugin/discourse/templates/modal/invalid-codebyte-modal",["exports","@ember/template-factory"],(function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var o=(0,t.createTemplateFactory)({id:"wxYRv8sv",block:'[[[6,[39,0],null,[["title"],["modal.title"]],[["default"],[[[[1,"  "],[10,0],[12],[1,[28,[35,1],["modal.content"],null]],[13],[1,"\\n  "],[10,0],[12],[1,"\\n    "],[1,[28,[35,2],null,[["action","label","class"],[[28,[37,3],[[30,0],"goBackAndFix"],null],"modal.button","btn-primary"]]]],[1,"\\n  "],[13],[1,"\\n"]],[]]]]]],[],false,["d-modal-body","i18n","d-button","action"]]',moduleName:"discourse/plugins/discourse-codebytes-plugin/discourse/templates/modal/invalid-codebyte-modal.hbs",isStrictMode:!1})
+e.default=o})),define("discourse/plugins/discourse-codebytes-plugin/initializers/code-bytes",["exports","discourse/lib/load-script","discourse/lib/plugin-api","discourse/lib/show-modal"],(function(e,t,o,n){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=e.CODEBYTE_OPEN_TAG_WITH_LANG_REGEX=e.CODEBYTE_OPEN_TAG_REGEX=e.CODEBYTE_CLOSE_TAG_REGEX=void 0,e.findCodeByte=c
+const s=/^\[codebyte.*]$/
+e.CODEBYTE_OPEN_TAG_REGEX=s
+const i=/^\[codebyte[ ]+language=([^\s]+?)[ ]*]$/
+e.CODEBYTE_OPEN_TAG_WITH_LANG_REGEX=i
+const d=/^\[\/codebyte]$/
+function c(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:[],t=arguments.length>1?arguments[1]:void 0
+const o=[],n=[]
+let i=-1
+return e.some(((e,c)=>{if(e.match(s))o.push(c)
+else if(e.match(d)&&o.length){const e=o.pop()
+if(0===o.length&&i++,i===t)return n.push(e,c),!0}})),n}function a(e){e.onToolbarCreate((e=>{e.groups.lastObject.lastGroup=!1,e.groups.addObject({group:"codecademy",buttons:[],lastGroup:!0}),e.addButton({id:"codebyte",title:"composer.codebyte",group:"codecademy",icon:"codecademy-logo",className:"codecademy-codebyte-discourse-btn",action:()=>e.context.send("insertCodeByte")})})),e.modifyClass("component:d-editor",{init(){this._super(...arguments),this.onSaveResponse=e=>{if(e.data.codeByteSaveResponse){var t
+const o=null===(t=this.element)||void 0===t?void 0:t.querySelectorAll(".d-editor-preview .d-codebyte iframe")
+if(!o)return
+const n=Array.from(o).map((e=>e.contentWindow)).indexOf(e.source)
+n>=0&&this.send("updateCodeByte",n,e.data.codeByteSaveResponse)}},window.addEventListener("message",this.onSaveResponse,!1)},willDestroyElement(){this._super(...arguments),window.removeEventListener("message",this.onSaveResponse,!1)},actions:{insertCodeByte(){let e="[codebyte]\n\n[/codebyte]",t="[codebyte]\n",o="\n[/codebyte]"
+const n=this.getSelected("",{lineVal:!0}),s=this.getSelected(),i=0===n.lineVal.length,d=s.value.length>0,c=n.lineVal===n.value,a=""===n.pre.trim(),l="\n"===s.post[0]
+d?(i||c||a||(t="\n"+t),l||(o+="\n"),this.set("value","".concat(s.pre).concat(t).concat(s.value).concat(o).concat(s.post))):(i||(e="\n"+e),l||(e+="\n"),this.insertText(e))},updateCodeByte(e,t){let{text:o,language:n}=t
+const s=this.get("value").split("\n"),[i,d]=c(s,e)
+if(void 0!==i&&void 0!==d){const e=["[codebyte language=".concat(n,"]"),...o.split("\n")]
+s.splice(i,d-i,...e)}this.set("value",s.join("\n"))}}}),e.decorateCookedElement(((e,o)=>{const n=e.classList.contains("d-editor-preview"),s=o?"".concat(document.location.origin).concat(o.getModel().urlWithNumber):document.location.href
+e.querySelectorAll("div.d-codebyte").forEach((async(e,o)=>{const i=await function(){let e=arguments.length>0&&void 0!==arguments[0]?arguments[0]:"",o=arguments.length>1&&void 0!==arguments[1]?arguments[1]:"",n=arguments.length>2&&void 0!==arguments[2]&&arguments[2],s=arguments.length>3&&void 0!==arguments[3]?arguments[3]:""
+return(0,t.default)("https://cdn.jsdelivr.net/npm/js-base64@3.6.0/base64.min.js").then((()=>{const t=document.createElement("iframe")
+t.allow="clipboard-write"
+const i=[]
+return i.push("lang=".concat(e)),i.push("text=".concat(Base64.encodeURI(o))),i.push("client-name=forum"),i.push("page=".concat(encodeURIComponent(s))),n&&i.push("mode=compose"),t.src="https://www.codecademy.com/codebyte-editor?".concat(i.join("&")),Object.assign(t.style,{display:"block",height:"400px",width:"100%",maxWidth:"712px",marginBottom:"24px",border:0}),t}))}(e.dataset.language,e.textContent.trim(),n,s)
+if(e.innerHTML="",e.appendChild(i),n){const t=document.createElement("button")
+t.className="btn-primary",t.textContent="Save to post",t.style.marginBottom="24px",t.onclick=()=>i.contentWindow.postMessage({codeByteSaveRequest:!0},"*"),e.appendChild(t)}}))}),{id:"codebyte-preview"}),e.modifyClass("controller:composer",{save(){let e,t,o=!0,s=0
+const d=this.model.reply.split("\n")
+do{[e,t]=c(d,s),s++,void 0===e||d[e].match(i)||(o=!1)}while(o&&void 0!==e)
+if(o)this._super(...arguments)
+else{(0,n.default)("invalidCodebyteModal",{model:this.model,modalClass:"codebytes-invalid-modal"}).actions.goBackAndFix=()=>this.send("closeModal")}}})}e.CODEBYTE_CLOSE_TAG_REGEX=d
+var l={name:"code-bytes",initialize(e){e.lookup("site-settings:main").code_bytes_enabled&&(0,o.withPluginApi)("0.8.31",a)}}
+e.default=l})),define("discourse/plugins/discourse-codebytes-plugin/lib/discourse-markdown/code-bytes",["exports","pretty-text/engines/discourse-markdown/bbcode-block"],(function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.setup=function(e){e.registerOptions(((e,t)=>{e.features["code-bytes"]=!!t.code_bytes_enabled})),e.registerPlugin((e=>{e.block.bbcode.ruler.push("block-codebyte",n)})),e.allowList(["div.".concat(o),"span.".concat(o),"span[data-*]"])}
+const o="d-codebyte",n={tag:"codebyte",replace(e,t,n){let s=e.push("codebyte_open","div",1)
+return s.attrs=[["class",o]],t.attrs.language&&s.attrs.push(["data-language",t.attrs.language]),s=e.push("text","",0),s.content=n,e.push("codebyte_close","div",-1),!0}}}))
+
+//# sourceMappingURL=discourse-codebytes-plugin-d0d74b7f6e297b305c552c7aad9be944cba60eaac2b9f7bb456669ad22f8f314.map
+//!
+
+;

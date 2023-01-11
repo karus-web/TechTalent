@@ -1,0 +1,7 @@
+"define"in window&&define("discourse/theme-75/initializers/theme-field-209-common-html-script-1",["exports","discourse/lib/plugin-api"],(function(e,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+require("discourse/lib/theme-settings-store").getObjectForTheme(75)
+var t={name:"theme-field-209-common-html-script-1",after:"inject-objects",initialize(){(0,i.withPluginApi)("0.8.18",(e=>{e.changeWidgetSetting("home-logo","href","https://www.codecademy.com/")}))}}
+e.default=t}))
+
+//# sourceMappingURL=8f867ddffd54f98bdbdae57e138190f186bce1f9.map?__ws=discuss.codecademy.com

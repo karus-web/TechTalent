@@ -1,0 +1,9 @@
+"define"in window&&define("discourse/theme-135/pre-initializers/theme-135-translations",["exports"],(function(e){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+var t={name:"theme-135-translations",initialize(){const e={en:{hamburger_menu:{theme_selector:"Theme Selector"}}}
+for(let t in e){let n=I18n.translations
+for(let e of[t,"js","theme_translations"])n=n[e]=n[e]||{}
+n[135]=e[t]}}}
+e.default=t}))
+
+//# sourceMappingURL=662de031eb4cdba170a7fa70b3b30068756ab945.map?__ws=discuss.codecademy.com

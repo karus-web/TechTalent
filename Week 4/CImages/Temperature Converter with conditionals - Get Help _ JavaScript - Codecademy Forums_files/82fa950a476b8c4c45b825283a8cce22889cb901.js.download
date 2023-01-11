@@ -1,0 +1,8 @@
+"define"in window&&define("discourse/theme-41/initializers/theme-field-95-common-html-script-1",["exports","discourse/lib/plugin-api"],(function(e,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+require("discourse/lib/theme-settings-store").getObjectForTheme(41)
+var t={name:"theme-field-95-common-html-script-1",after:"inject-objects",initialize(){(0,i.withPluginApi)("0.8.18",(e=>{$(document).ready((function(){const e=Discourse.User.current()
+if(e&&e.groups){if(e.groups.some((function(e){return"pro_users"===e.name})))$("head").append('<style type="text/css"></style>'),$("head").children(":last").html(".pricing{display:none;}")}}))}))}}
+e.default=t}))
+
+//# sourceMappingURL=82fa950a476b8c4c45b825283a8cce22889cb901.map?__ws=discuss.codecademy.com

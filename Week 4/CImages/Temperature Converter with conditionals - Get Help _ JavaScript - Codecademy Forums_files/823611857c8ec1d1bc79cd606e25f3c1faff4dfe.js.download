@@ -1,0 +1,13 @@
+"require"in window&&require("discourse/lib/theme-settings-store").registerSettings(24,{Custom_header_links:"Home, Forum Home, /, vdm, self, keep|Catalog, Codecademy Course Catalog, https://www.codecademy.com/catalog/subject/all, vdo, blank, keep|Chapters, Codecademy Chapters, https://community.codecademy.com/, vdo, blank, keep|Chat, Codecademy Chat, https://discord.com/invite/codecademy, vdo, blank, keep",links_position:"right"}),"define"in window&&define("discourse/theme-24/initializers/discourse-custom-header-links",["exports","virtual-dom","discourse/lib/plugin-api"],(function(e,t,i){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+const o=require("discourse/lib/theme-settings-store").getObjectForTheme(24)
+var s={name:"discourse-custom-header-links",initialize(){(0,i.withPluginApi)("0.8.20",(e=>{const i=o.Custom_header_links
+if(!i.length)return
+const s="right"===o.links_position?"header-buttons:before":"home-logo:after",a=[]
+i.split("|").filter(Boolean).map((e=>{const[i,o,s,r,d,n]=e.split(",").filter(Boolean).map((e=>e.trim())),c=".".concat(r),l="self"===d?"":"_blank",m="keep"===n?".keep":"",u=".".concat(i.toLowerCase().replace(/\s/gi,"-"),"-custom-header-links"),h={title:o,href:s}
+l&&(h.target=l),a.push((0,t.h)("li.headerLink".concat(c).concat(m).concat(u),(0,t.h)("a",h,i)))})),e.decorateWidget(s,(e=>e.h("ul.custom-header-links",a))),e.decorateWidget("home-logo:after",(e=>{const t=document.querySelector(".d-header")
+if(!t)return
+e.attrs.minimized?t.classList.add("hide-menus"):t.classList.remove("hide-menus")}))}))}}
+e.default=s}))
+
+//# sourceMappingURL=823611857c8ec1d1bc79cd606e25f3c1faff4dfe.map?__ws=discuss.codecademy.com

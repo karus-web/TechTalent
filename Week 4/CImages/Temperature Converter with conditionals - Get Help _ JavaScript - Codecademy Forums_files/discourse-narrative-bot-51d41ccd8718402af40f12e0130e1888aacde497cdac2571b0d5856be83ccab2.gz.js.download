@@ -1,0 +1,10 @@
+define("discourse/plugins/discourse-narrative-bot/initializers/new-user-narrative",["exports","discourse/lib/plugin-api"],(function(e,t){"use strict"
+Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0
+function i(e){const t=e.container.lookup("service:message-bus"),i=e.getCurrentUser(),r=e.container.lookup("service:app-events")
+e.modifyClass("component:site-header",{pluginId:"new-user-narrative",didInsertElement(){this._super(...arguments),this.dispatch("header:search-context-trigger","header")}}),e.attachWidgetAction("header","headerSearchContextTrigger",(function(){this.site.mobileView?this.state.skipSearchContext=!1:(this.state.contextEnabled=!0,this.state.searchContextType="topic")})),t&&i&&t.subscribe("/new_user_narrative/tutorial_search",(()=>{r.trigger("header:search-context-trigger")}))}var r={name:"new-user-narrative",initialize(e){e.lookup("service:site-settings").discourse_narrative_bot_enabled&&(0,t.withPluginApi)("0.8.7",i)}}
+e.default=r}))
+
+//# sourceMappingURL=discourse-narrative-bot-fbcb031fd30e9cd57c83a1579ff71cf17f22e4cb71dbf7103a466940855a73fb.map
+//!
+
+;
