@@ -1,0 +1,116 @@
+                                                                   <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cstyle.css" type="text/css">
+</head>
+<body>
+<!-- Cake Shop Common Header-->        
+    <div class="header">
+        <h1>Cake Shop</h1>
+        <button onclick="clrmode()">Toggle dark mode</button>
+    </div>
+<!-- Top Navigation bar with Contacts page active-->        
+    <div>
+        <ul class="topnav">
+            <li><a href="CakeHome.html">Home</a></li>
+            <li><a href="Order.html">Order Page</a></li>
+            <li><a href="Contact.html">Contacts</a></li>
+            <li><a class="active" href="Blog.html">Blog</a></li>
+            <li class="right"><a href="About.html">About</a></li>
+        </ul>
+    </div>
+
+<!-- Common Styling for all About page-->         
+
+<!-- Contacts page Heading-->        
+
+    <div class="about">
+        <h2>BLOG</h2>
+        <h3>ORANGE SALTED HONEY CAKE, 20th Jan, 2022</h3>
+        <div>
+            <img src="CImages/oshcake.jpg"  alt ="Blogpic">
+        </div>
+        <p>Hi everyone!. I’ve been a long-time contributor here at The Cake Blog and I’m back today to share one of my favorite cakes from my new cookbook Icing on the Cake. You guessed it, the book is all about icing and cake, but also all kinds of decorate desserts. From cakes to pies, macarons to meringues, the books is full of beautiful recipes with plenty of tips and step-by-step photos to help you recreate them at home.</p>
+        <p>It’s easy to see why this Orange Salted Honey Cake has quickly become an early fan favorite. The title is so enticing and the decoration is perfect for spring. I could eat the salted honey custard by the spoonful! By rubbing fresh orange zest straight into the sugar of the cake batter, the citrus oils perfume the cake with a wonderful zesty, slightly floral flavor. The buttercream substitutes half of the sugar from my go-to Swiss meringue buttercream with honey. The result packs a real honey flavor without being overly sweet, but the salt in the custard filling gives an additional dimension to the entire cake.</p>
+    </div>
+    
+    <h3> Comments : </h3>
+
+    <form class="blogcmnt">
+        <p> <b>Jack Jones said on <i>Friday 20th Jan 2022</i>: </b></p>
+        <p> This cake is so easy to make and amazing in taste</p>
+    </form>
+
+<!-- Enter Comments box -->    
+    <div>
+        <form  id="create-account-form" action="" method="GET">
+            <div class="container">
+                
+<!-- Title field -->
+                <div class="input-group">
+                    <label for="title">Title*</label>
+                    <input type="text" id="title" placeholder="Title" name="title">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- AUTHOR's Name -->
+                <div class="input-group">
+                    <label for="author">Author*</label>
+                    <input type="text" id="author" placeholder="Author's name" name="author">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- Leave a Comment box  --> 
+                <div class="input-group">
+                    <label for="entry">Comments*:  </label>
+                    <textarea  id="entry" name="entry" style="height:170px" placeholder="Leave your comments... "></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- Send button with message -->            
+            <button type="submit" class="btn">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Display submitted content below -->            
+    <div class="blogcmnt">
+        <h5> Below data is captured from URL after Form submission :</h5>
+        <p id="paragraph"></p>
+    </div>
+
+    <!-- Logic to display comments with date (invalid & just for test) -->            
+    <textarea id="textbox" placeholder="Your response pls." value=""></textarea>
+    <button id="btn" onclick="add()">Add</button>
+    <div id="comments">
+        <h4>Responses</h4>
+        <ul id="ul"></ul>
+    </div>
+
+<!-- Cake Shop Common footer-->
+    <div class="footer">
+        <p> The Cake Shop is rated 5 - Very Good by the Food Standards Agency </p>
+        <p> Telephone : 0333 465 3434, Email: cake@cakeshop.com</p>
+        <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+    </div>
+    
+    <!-- Calling js script to execute functions  -->
+    <script 
+        src="cblog.js">
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cstyle.css" type="text/css">
+</head>
+<body>
+<!-- Cake Shop Common Header-->        
+    <div class="header">
+        <h1>Cake Shop</h1>
+        <button onclick="clrmode()">Toggle dark mode</button>
+    </div>
+
+<!-- Top Navigation bar with Order page active-->        
+<div>
+    <ul class="topnav">
+      <li><a href="CakeHome.html">Home</a></li>
+      <li><a class="active" href="Order.html">Order Page</a></li>
+      <li><a href="Contact.html">Contacts</a></li>
+      <li><a href="Blog.html">Blog</a></li>
+      <li class="right"><a href="About.html">About</a></li>
+      
+    </ul>
+  </div>
+  
+<!-- Order page Heading-->        
+<div>
+    <h2>Order Here</h2>
+</div>
+
+<div class="containerop">
+    <form action="/action_page.php" autocomplete ="off">
+
+<!-- Name field with text box -->
+        <div>
+            <h4>
+                Choose your choice here and customise the delicious cake ...
+            </h4>
+
+<!-- Size and Price List box -->
+            <label for="Size and Price">Size and Price *</label>
+            <br>
+            <select id="Size and Price" name="Size and Price" required>
+                <option value="6 inch">6 inch (feeds 10) (+£15)</option>
+                <option value="8 inch">8 inch (feeds 20) (+£25)</option>
+                <option value="10 inch">10 inch (feeds 30) (+£30)</option>
+                <option value="6 Cup Cakes">6 Cup Cakes (+£5)</option>
+                <option value="12 Cup Cakes">12 Cup Cakes (+£9)</option>
+            </select>
+            <br><br>
+        
+<!-- Sponge Type List box -->
+            <label for="Sponge Type">Sponge Type</label>
+            <br>
+            <select id="Sponge Type" name="Sponge Type">
+                <option value="Choose Sponge Type">Choose Sponge Type</option>
+                <option value="Vanilla">Vanilla</option>
+                <option value="Chocolate">Chocolate</option>
+            </select>
+            <br><br>
+        
+<!-- Filling List box -->
+            <label for="Filling">Filling</label>
+            <br>
+            <select id="Filling" name="Filling">
+                <option value="Strawberry jam & Vanilla butter cream">Strawberry jam & Vanilla butter cream</option>
+                <option value="Vanilla butter cream">Vanilla butter cream</option>
+                <option value="Chocolate butter cream">Chocolate butter cream</option>
+            </select>
+            <br><br>
+
+<!-- Shape List box -->
+            <label for="Shape">Shape *</label>
+            <br>
+            <select id="Shape" name="Shape" required>
+                <option value="Choose Shape">Choose Shape</option>
+                <option value="Round">Round</option>
+                <option value="Square">Square</option>
+            </select>
+            <br><br>
+
+<!-- Your message with text box -->            
+            <label for="Customisation Options">Customisation Options:  </label>
+            <br>
+            <textarea name="Write your message or name to go on cake" placeholder="Write your message or name to go on cake "></textarea>
+            <br><br>
+
+<!-- Send button with message -->            
+            <input type="button" value="ADD TO CART & PAY">
+            <br><br>
+        </div>
+    </form>
+</div>
+    
+<!--Cake Shop Common footer-->
+    <div class="footer">
+        <p> The Cake Shop is rated 5 - Very Good by the Food Standards Agency </p>
+        <p> Telephone : 0333 465 3434, Email: cake@cakeshop.com</p>
+        <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Calling js script to execute functions  -->
+    <script 
+        src="cscript.js">
+    </script>
+
+</body>
+</html>

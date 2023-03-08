@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cstyle.css" type="text/css">
+</head>
+<body>
+<!-- Cake Shop Common Header-->        
+    <div class="header">
+        <h1>Cake Shop</h1>
+        <button onclick="clrmode()">Toggle dark mode</button>
+    </div>
+<!-- Top Navigation bar with Contacts page active-->        
+    <div>
+        <ul class="topnav">
+            <li><a href="CakeHome.html">Home</a></li>
+            <li><a href="Order.html">Order Page</a></li>
+            <li><a class="active" href="Contact.html">Contacts</a></li>
+            <li><a href="Blog.html">Blog</a></li>
+            <li class="right"><a href="About.html">About</a></li>
+        </ul>
+    </div>
+
+<!-- Contacts page Heading-->        
+    <div>
+        <h2>Contact</h2>
+    </div>
+    
+    <div>
+
+        <form  id="create-account-form" action="" method="GET">
+<!-- Name field with text box -->
+            <div class="container">
+                <h4>
+                    Get in touch...
+                </h4>
+                <div class="fnotes">
+                    <p> Please message us using the form below and we'll get back to you as soon as we can. 
+                       We look forward to your comments and feedback on the site.
+                </div>
+                <div class="input-group">
+                    <label for="username">Name*</label>
+                    <input type="text" id="username" placeholder="Name" name="username">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- EMAIL -->
+                <div class="input-group">
+                    <label for="email">Email*</label>
+                    <input type="email" id="email" placeholder="Email" name="email">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- Telephone -->
+                <div class="input-group">
+                    <label for="telephone">Telephone*</label>
+                    <input type="text" id="telephone" placeholder="Telephone" name="telephone">
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- Your message with text box  --> 
+                <div class="input-group">
+                    <label for="message">Message*:  </label>
+                    <textarea  id="message" name="message" placeholder="Type your message... "></textarea>
+                    <i class="fas fa-check-circle"></i>
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Error Message</p>
+                </div>
+<!-- Send button with message -->            
+            <button type="submit" class="btn">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
+
+    <!-- Code for displaying the content after Submit button in contact page-->
+    
+    <div class="container">
+        <h5> Below data captured after form submission :</h5>
+        <p id="paragraph"></p>
+    </div>
+
+<!-- Cake Shop Common footer-->
+    <div class="footer">
+        <p> The Cake Shop is rated 5 - Very Good by the Food Standards Agency </p>
+        <p> Telephone : 0333 465 3434, Email: cake@cakeshop.com</p>
+        <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+    </div>
+
+    <!-- Calling js script to execute functions  -->
+    <script src="cscript.js"></script>
+
+</body>
+</html>

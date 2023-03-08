@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CakeShop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" 
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Cstyle.css" type="text/css">
+</head>
+<body>
+<!-- Cake Shop Common Header-->        
+  <div class="header">
+    <h1>Cake Shop</h1>
+    <button onclick="clrmode()">Toggle dark mode</button>
+  </div>
+
+  <div>
+  <!-- Top Navigation bar with Home active-->        
+    <div>
+      <ul class="topnav">
+        <li><a class="active" href="CakeHome.html">Home</a></li>
+        <li><a href="Order.html">Order Page</a></li>
+        <li><a href="Contact.html">Contacts</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li class="right"><a href="About.html">About</a></li>
+      </ul>
+    </div>
+
+  <!-- Image gallery Home screen-->        
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_self" href="Order.html">
+          <img src="CImages/christmascake.jpg" alt="Christmas Cakes" width="600" height="400">
+        </a>
+        <div class="desc">Christmas Cakes</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_self" href="Order.html">
+          <img src="CImages/hbcake1.jpg" alt="Birthday Cakes" width="600" height="400">
+        </a>
+        <div class="desc">Birthday Cakes</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_self" href="Order.html">
+          <img src="CImages/Weddingcake2.jpg" alt="Wedding Cakes" width="600" height="400">
+        </a>
+        <div class="desc">Wedding Cakes</div>
+      </div>
+    </div>
+
+    <div class="responsive">
+      <div class="gallery">
+        <a target="_self" href="Order.html">
+          <img src="CImages/cupcakes.jpg" alt="Cup Cakes" width="600" height="400">
+        </a>
+        <div class="desc">Cup Cakes</div>
+      </div>
+    </div>
+
+<!--Break after image gallery-->
+    <div class="clearfix"></div>
+
+<!--Home page Content-->
+    <div class="about">
+      <h1>Beautiful Cakes for Every Occasion</h1>
+      <p>Choose one of our ready-made designs or create your own bespoke masterpiece! Fresh from The Cake Shop, 
+        customised for you.
+      </p>  
+      <p> Due to the intricate and fragile nature of our creations, all our cakes can be collected from our 
+        Cambridge or Maidenhead shops or delivered within a 30-mile radius by our dedicated Cake Shop drivers. 
+        Check here to see if you are inside our delivery area. If you’re not within our delivery area, 
+        please call to discuss options.
+      </p>  
+      <p> We also have a specially selected range of cost-effective quick cakes which are available for delivery 
+        or collection.
+      </p>
+      <p> Order a birthday, wedding or special occasion cake from our selection online or 
+        contact our shop on 01995 678910 to arrange a free consultation for a bespoke creation.
+      </p>
+    </div>
+  </div> 
+  
+<!--Cake Shop Common footer-->
+  <div class="footer">
+    <p> The Cake Shop is rated 5 - Very Good by the Food Standards Agency </p>
+    <p> Telephone : 0333 465 3434, Email: cake@cakeshop.com</p>
+    <a href="#" class="nav-link"><i class="fab fa-facebook-f"></i></a>
+    <a href="#" class="nav-link"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="nav-link"><i class="fab fa-instagram"></i></a>
+  </div>
+
+    <!-- Calling js script to execute functions  -->
+  <script 
+    src="cscript.js">
+  </script>
+
+</body>
+</html>

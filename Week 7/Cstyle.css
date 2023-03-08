@@ -1,0 +1,285 @@
+
+html {
+  font-family: "Lucida Sans", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {margin: 0;
+  padding: 15px;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+/* Navigation Bar Styles */
+ul.topnav {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+  }
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+    display: block;
+    color: #ede9eb;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}  
+
+ul.topnav li a.active {background-color: #0099cc;}
+
+ul.topnav li.right {float: right;}
+
+.header {
+  background-color: #5c0a55;
+  color: #ede9eb;
+  padding: 12px;
+  font-size: 20px;
+  text-align: center;
+  }
+
+h2{ font-size: 35px; color: #a7369d;
+text-align: center;
+  }
+
+/* Home page - cake gallery */
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+/* Order page Styles */
+
+select {
+  width: 100%; background: whitesmoke; 
+  border: 2px solid #b6b3b3; border-radius: 4px;
+  box-sizing: border-box;
+  padding: 10px 20px; font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.containerop {
+  max-width: 500px; height: fit-content;
+  border-radius: 5px; border: 3px solid #a7369d;
+  background-color: #ede9eb;
+  padding: 40px;
+  margin: auto;
+  }
+  input {
+    width: 100%; background: whitesmoke; 
+    border: 2px solid #b6b3b3; border-radius: 4px;
+    box-sizing: border-box;
+    padding: 10px 20px; font-size: 16px;
+  }
+input[type="button"] {
+  width: 100%; background: #b861b0; border: 1px solid black; 
+  cursor: pointer; color: whitesmoke;
+  font-weight: bold;
+  }
+input[type="button"]:hover{ background: #5c0a55;
+  }
+
+/* Contact page Styles */
+.input-group {
+  position:relative;
+}
+.input-group label {
+  display:inline-block;
+  margin-bottom: 1px;
+}
+.input-group input {
+  display:block;
+  width:100%;
+  padding:10px;   
+}
+.error input {
+  border:3px red solid;
+}
+.success input {
+  border:3px green solid;
+}
+.input-group textarea {
+  display:block;
+  width:100%;
+  padding:10px;
+  height:170px;
+}
+.error textarea {
+  border:3px red solid;
+}
+.success textarea {
+  border:3px green solid;
+}
+.input-group i {
+  position:absolute;
+  right:10px;
+  top:35px;
+  visibility: hidden;
+}
+.success i.fa-check-circle{
+  visibility: visible;
+  color:green;
+}
+.error i.fa-exclamation-circle {
+ visibility: visible;
+ color:red;
+}
+.input-group p {
+  font-size: 15px;
+  color:red;
+  visibility: hidden;
+}
+.error p {
+  visibility: visible;
+}
+.btn {
+  width: 100%; background: #b861b0; border: 1px solid black; 
+  border-radius: 4px;
+  cursor: pointer; color: whitesmoke;
+  font-weight: bold;
+  box-sizing: border-box;
+  padding: 10px 20px; font-size: 16px;
+  }
+.btn:hover { background: #5c0a55;
+  }
+.container {
+  max-width: 500px; height: fit-content;
+  border-radius: 5px; border: 3px solid #a7369d;
+  background-color: #ede9eb;
+  padding: 40px;
+  margin: auto;
+  }
+label {
+    color: #5c0a55;
+    padding-top: 10px;
+    width: 300px;
+    display: inline;
+    text-align: left;
+    font-weight: 600;
+  }
+
+textarea { 
+    width: 100%; height: 60px; background: whitesmoke; 
+    border: 2px solid #b6b3b3; border-radius: 4px; box-sizing: border-box;
+    padding: 10px 20px; font-size: 14px; resize: none;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+h4 { font-size: 25px; color: #302e2e;
+  }
+
+.fnotes { color: #464343;
+  }
+
+
+/* Blog page Styles */
+.blogcmnt {
+  background-color: #ede9eb;
+  color: #5c0a55;
+  padding: 5px;
+  text-align: left;
+}
+
+.containerblog {
+  max-width: 500px; height: fit-content;
+  border-radius: 5px; border: 1px solid #a7369d;
+  background-color: #ede9eb;
+  padding: 40px;
+  margin: auto;
+  }
+
+
+/* About page Styles */
+.about {
+    background-color: #ede9eb;
+    color: #5c0a55;
+    padding: 5px;
+    text-align: center;
+  }
+
+.footer {
+  background-color: #0099cc;
+  color: #ffffff;
+  text-align: center;
+  font-size: 12px;
+  padding: 15px;
+  }
+  .nav-link{
+    font-size:18px;
+    margin:12px;
+    color:var(--dark);
+    font-family: 'Lucida Sans', sans-serif;
+    
+}
+
+@media only screen and (max-width: 800px) {
+ .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}  
+
+@media screen and (max-width: 500px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}    
+ 
+  .responsive {
+    width: 100%;
+  }
+ }
+
