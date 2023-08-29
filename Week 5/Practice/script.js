@@ -28,19 +28,3 @@ if(response){
 }
     
 
-<button onclick="confirmAtion()"> confirm your choice</button>
-<p id="display2"></p>unction confirmAtion() {
-    let cctiontext;
-         const confirmaction = () => {
-         const response = confirm("Are you sure you want to do that?:", "cactiontext");
-             if (response){
-                 alert("Ok was pressed");
-             }
-              
-             else {
-                 alert("cancel was  pressed");
-             }
-               document.getElementById("display2").innerHTML = caciontext;
-             console.log(cactiontext)
-         
-         }   
